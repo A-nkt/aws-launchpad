@@ -55,4 +55,9 @@ Resources:
         SigningBehavior: always
         SigningProtocol: sigv4
 
+Outputs:
+  CloudFrontDistributionId:
+    Value: !Ref CloudFrontDistribution
+    Export:
+      Name: !Sub ${EnvironmentName}-${CategoryName}-${AppName}-CloudFrontDistributionId
 

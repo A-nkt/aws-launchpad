@@ -50,4 +50,7 @@ Resources:
               Service: cloudfront.amazonaws.com
             Condition:
               StringEquals:
-                AWS:SourceArn: !Sub "arn:aws:cloudfront::${AWS::AccountId}:distribution/*"
+                aws:SourceArn: !Join
+                  - ""
+                  - - !Sub "arn:aws:cloudfront::${AWS::AccountId}:distribution/"
+                    - {'Fn::ImportValue': !Sub '${EnvironmentName}-${CategoryName}-cloudfront-CloudFrontDistributionId'}
