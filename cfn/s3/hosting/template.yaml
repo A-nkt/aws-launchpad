@@ -1,0 +1,22 @@
+AWSTemplateFormatVersion: 2010-09-09
+Transform: AWS::Serverless-2016-10-31
+
+Parameters:
+  EnvironmentName:
+    Type: String
+  
+  CategoryName:
+    Type: String
+  
+  AppName:
+    Type: String
+  
+  Region:
+    Type: String
+
+Resources:
+  Bucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: !Sub ${EnvironmentName}-${CategoryName}-${AppName}-${Region}
+
