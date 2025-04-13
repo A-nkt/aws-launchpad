@@ -1,2 +1,2 @@
 # aws-launchpad
-このリポジトリは、AWSを基盤としたWebサービスのデプロイを簡素化するためのテンプレートや構成例をまとめたものです。Lambda、API Gateway、S3、CloudFrontなどのサーバーレス技術を活用しています。
+This repository provides templates and configuration examples to simplify the deployment of web services on AWS.
