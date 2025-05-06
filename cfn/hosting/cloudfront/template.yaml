@@ -50,7 +50,6 @@ Resources:
     Properties:
       OriginAccessControlConfig:
         Name: !Sub ${EnvironmentName}-${CategoryName}-${AppName}-${Region}-OAC
-        Description: Access control for CloudFront to access S3
         OriginAccessControlOriginType: s3
         SigningBehavior: always
         SigningProtocol: sigv4
